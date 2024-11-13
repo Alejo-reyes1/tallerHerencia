@@ -33,21 +33,21 @@ public class Laboratorio {
 	public String obtenerListaBeneficiarios() {
 		String mensaje="";
 		for(Empleado e:this.listaEmpleados) {
-			mensaje=e.obtenerListaBeneficios();
+			mensaje=e.obtenerListaBeneficios()+"\n";
 		}
 		return mensaje;
 	}
 	public String informacionEmpleados() {
 		String mensaje="";
 		for(Empleado e:this.listaEmpleados) {
-			mensaje=e.mostrarInformacion();
+			mensaje=e.mostrarInformacion()+"\n";
 		}
 		return mensaje;
 	}
 	public String listaSalarioEmpleados() {
 		String mensaje="";
 		for(Empleado e :this.listaEmpleados) {
-			mensaje+="El salario del empleado "+e.getNombre()+" Es de "+e.calcularSalario();	
+			mensaje+="El salario del empleado "+e.getNombre()+" Es de "+e.calcularSalario()+"\n";	
 		}
 		return mensaje;
 	}
