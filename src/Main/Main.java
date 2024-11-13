@@ -14,7 +14,7 @@ public class Main {
 	public static void main(String[] args) {
 		int tipoEmpleado;
 		do {
-			tipoEmpleado=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tipo de empleado que desea agregar al laboratorio\n 1.agregar empleado\n 2.Empleado medio tiempo\n 3.Empleado contratista\n 4. obtener lista de beneficiarios\n 5.mostrar informacion."));
+			tipoEmpleado=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tipo de empleado que desea agregar al laboratorio\n 1.agregar empleado\n 2.Empleado medio tiempo\n 3.Empleado contratista\n 4. obtener lista de beneficiarios\n 5.mostrar informacion.\n 6.mostrar salario de los empleados"));
 			opcionEmpleado(tipoEmpleado);
 		}while(tipoEmpleado<4);
 	}
@@ -38,9 +38,16 @@ public class Main {
 		case 5:
 			mostrarInformacionEmpleados();
 			break;
+		case 6:
+			mostrarSalarioEmpleados();
+			break;
 		}
 	}
 
+	private static void mostrarSalarioEmpleados() {
+		String listaSalarioEmpleados=l.listaSalarioEmpleados();
+		JOptionPane.showMessageDialog(null, listaSalarioEmpleados);
+	}
 	private static void mostrarInformacionEmpleados() {
 		String listaInformacionEmpleados=l.informacionEmpleados();
 		JOptionPane.showMessageDialog(null, listaInformacionEmpleados);

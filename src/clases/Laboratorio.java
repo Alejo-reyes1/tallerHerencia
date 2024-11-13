@@ -44,6 +44,13 @@ public class Laboratorio {
 		}
 		return mensaje;
 	}
+	public String listaSalarioEmpleados() {
+		String mensaje="";
+		for(Empleado e :this.listaEmpleados) {
+			mensaje+="El salario del empleado "+e.getNombre()+" Es de "+e.calcularSalario();	
+		}
+		return mensaje;
+	}
 	
 
 }
